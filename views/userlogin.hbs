@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('/signupbackground.png');
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login {
+            width: 400px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .login h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .login label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .login input[type="email"],
+        .login input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .login input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0D7A5F;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login input[type="submit"]:hover {
+            background-color: #0D7A5F;
+        }
+
+        .login a {
+            display: block;
+            margin-top: 10px;
+            color: #007bff;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .login a:hover {
+            text-decoration: underline;
+        }
+
+        .login .logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 150px;
+            height: auto;
+        }
+
+        .login .form-group {
+            margin-bottom: 20px;
+        }
+
+        .login .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .login .checkbox-group input {
+            margin-right: 10px;
+        }
+
+        .login .checkbox-group span {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+  <div class="login">
+    <h1>Login Form</h1>
+    <form id="loginForm" method="POST" action="/userlogin">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+        <input type="submit" value="Login">
+        <p>{{ error }}</p> <!-- Display error messages here -->
+    </form>
+    <a href="#">Forgot Password</a>
+    <a href="/usersignup">Sign Up</a>
+</div>
+
+    </body>
+</html>

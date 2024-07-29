@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobNest Navigation</title>
+    <style>
+        /* Internal CSS for navigation bar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #ffff; /* Light background color */
+            overflow: hidden;
+            padding: 20px 100px; /* Increased padding */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adding a shadow */
+        }
+
+        .navbar-brand {
+            float: left; /* Align to the left */
+            font-size: 2rem; /* Larger font size */
+            font-weight: bold;
+            margin-left: 10rem;
+        }
+
+        .navbar-left {
+            float: right; /* Align to the right */
+        }
+
+        .navbar-left a {
+            color: #333; /* Link color */
+            text-decoration: none;
+            margin: 0 10px; /* Increased margin */
+            padding: 10px 15px; /* Increased padding */
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            font-size: 1.1rem; /* Larger font size */
+            font-weight: bold;
+        }
+
+        .tasker-signup-btn {
+            border: 1px solid #0D7A5F;
+            border-radius: 8px;
+            color: #0D7A5F;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.4;
+            padding: 8px 28px;
+            text-decoration: none;
+            transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+            user-select: none;
+        }
+
+        .tasker-signup-btn:hover {
+            background-color: #0D7A5F;
+            color: #fff;
+            border-color: #0D7A5F;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="navbar-brand">
+         <a href="home" style="text-decoration: none; color: #333;">JobNest</a>
+    </div>
+    <div class="navbar-left">
+        <a href="services">Services</a>
+        <a href="section">{{#if name}}Hello,{{name}}{{else}}Login/Signup{{/if}}</a> 
+        <a href="registerTasker" class="tasker-signup-btn">Become a Tasker</a>
+    </div>
+</div>
+
+</body>
+</html>

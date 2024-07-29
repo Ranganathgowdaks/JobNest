@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .center-content {
+            display: flex; /* Flexbox for horizontal alignment */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            gap: 20px; /* Space between buttons */
+        }
+
+        .login-button {
+            display: inline-block;
+            width: 250px; /* Fixed width for square shape */
+            height: 250px; /* Fixed height for square shape */
+            padding: 20px; /* Padding inside the box */
+            font-size: 1.5em; /* Increased font size */
+            border: none;
+            border-radius: 15px; /* Rounded corners */
+            cursor: pointer;
+            text-decoration: none; /* Added for anchor tags */
+            color: white; /* Text color */
+            outline: none;
+            display: flex; /* Flexbox to center text */
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better appearance */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+        }
+
+        .login-button:hover {
+            background-color: #0a5a46;
+            transform: scale(1.05); /* Slightly scale up on hover */
+        }
+
+        .admin-login {
+            background-color: #2e86c1; /* Blue color for admin login */
+        }
+
+        .user-login {
+            background-color: #e74c3c; /* Red color for user login */
+        }
+    </style>
+</head>
+<body>
+    <div class="center-content">
+        <a href="adminlogin" class="login-button admin-login">Admin Login</a>
+        <a href="userlogin" class="login-button user-login">User Login</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!-- views/addEmployee.hbs -->
+<style>
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="file"],
+    input[type='email'],
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    .employee-list {
+        margin-top: 20px;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .employee-list th,
+    .employee-list td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .employee-actions button {
+        margin-right: 5px;
+    }
+</style>
+
+<form action="/addEmployee" method="POST" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="file" name="image" required accept="image/*">
+    <input type="text" name="skills" placeholder="Skills (comma-separated)" required>
+    <input type="number" name="cost" placeholder="Cost in Rupees" required>
+    <input type="email" name="email" placeholder="Email Address" required> <!-- New field -->
+    <button type="submit">Add Employee</button>
+</form>
+
+
+<table class="employee-list">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Skills</th>
+            <th>Cost (Rs.)</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each employees}}
+        <tr>
+            <td>{{name}}</td>
+            <td><img src="/images/{{image}}" alt="{{name}}'s image" style="max-width: 100px; height: auto;"></td>
+            <td>{{skills}}</td>
+            <td>{{cost}}</td>
+            <td class="employee-actions">
+                <form action="/editEmployee/{{_id}}" method="GET">
+                    <button type="submit">Edit</button>
+                </form>
+                <form action="/deleteEmployee/{{_id}}" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

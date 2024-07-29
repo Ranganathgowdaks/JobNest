@@ -1,0 +1,197 @@
+[
+    {
+        "name": "Furniture Assembly",
+        "description": "Assemble various types of furniture including desks, chairs, and beds.",
+        "imageUrl": "/images/furnitureassembly.webp"
+    },
+    {
+        "name": "Home Repairs",
+        "description": "General home repair services including minor fixes and maintenance.",
+        "imageUrl": "/images/mounting&installation.webp"
+    },
+    {
+        "name": "Help Moving",
+        "description": "Assistance with moving items from one location to another.",
+        "imageUrl": "/images/shopping+delivery.webp"
+    },
+    {
+        "name": "Heavy Lifting",
+        "description": "Help with lifting and transporting heavy items.",
+        "imageUrl": "/images/movingservices.webp"
+    },
+    {
+        "name": "Spring Cleaning",
+        "description": "Thorough cleaning of your home to get rid of dust and dirt build-up.",
+        "imageUrl": "/images/cleaning.webp"
+    },
+    {
+        "name": "Door, Cabinet, & Furniture Repair",
+        "description": "Repair services for doors, cabinets, and furniture.",
+        "imageUrl": "/images/"
+    },
+    {
+        "name": "TV Mounting",
+        "description": "Mount your TV securely on the wall for an optimal viewing experience.",
+        "imageUrl": "/images/tv_mounting.jpg"
+    },
+    {
+        "name": "Flooring & Tiling Help",
+        "description": "Assistance with installing or repairing flooring and tiles.",
+        "imageUrl": "/images/flooring_tiling_help.jpg"
+    },
+    {
+        "name": "Plumbing",
+        "description": "Plumbing services including fixing leaks and installing fixtures.",
+        "imageUrl": "/images/plumbing.jpg"
+    },
+    {
+        "name": "Ceiling Fan Installation",
+        "description": "Installation of ceiling fans for improved air circulation.",
+        "imageUrl": "/images/ceiling_fan_installation.jpg"
+    },
+    {
+        "name": "Local Movers",
+        "description": "Movers specializing in local relocations.",
+        "imageUrl": "/images/local_movers.jpg"
+    },
+    {
+        "name": "One Item Movers",
+        "description": "Help with moving single items, such as a large appliance or piece of furniture.",
+        "imageUrl": "/images/one_item_movers.jpg"
+    },
+    {
+        "name": "Junk Pickup",
+        "description": "Pick up and disposal of unwanted junk and clutter.",
+        "imageUrl": "/images/junk_pickup.jpg"
+    },
+    {
+        "name": "Desk Assembly",
+        "description": "Assemble desks for home or office use.",
+        "imageUrl": "/images/desk_assembly.jpg"
+    },
+    {
+        "name": "Dresser Assembly",
+        "description": "Assemble dressers and other storage units.",
+        "imageUrl": "/images/dresser_assembly.jpg"
+    },
+    {
+        "name": "Couch Assembly",
+        "description": "Assemble couches and other seating furniture.",
+        "imageUrl": "/images/couch_assembly.jpg"
+    },
+    {
+        "name": "Chair Assembly",
+        "description": "Assemble various types of chairs.",
+        "imageUrl": "/images/chair_assembly.jpg"
+    },
+    {
+        "name": "TV Mounting",
+        "description": "Securely mount your TV on the wall for a clean and modern look.",
+        "imageUrl": "/images/tv_mounting.jpg"
+    },
+    {
+        "name": "General Mounting",
+        "description": "Mount various items such as shelves, art, and hooks.",
+        "imageUrl": "/images/general_mounting.jpg"
+    },
+    {
+        "name": "Hang Art",
+        "description": "Professional hanging of artwork and decorations.",
+        "imageUrl": "/images/hang_art.jpg"
+    },
+    {
+        "name": "Install Shelves",
+        "description": "Install shelves for storage and display purposes.",
+        "imageUrl": "/images/install_shelves.jpg"
+    },
+    {
+        "name": "Install Rods & Hooks",
+        "description": "Install rods and hooks for hanging items.",
+        "imageUrl": "/images/install_rods_hooks.jpg"
+    },
+    {
+        "name": "Deep Cleaning",
+        "description": "Extensive cleaning service that covers every corner of your home.",
+        "imageUrl": "/images/deep_cleaning.jpg"
+    },
+    {
+        "name": "Move In Cleaning",
+        "description": "Clean your new home before moving in.",
+        "imageUrl": "/images/move_in_cleaning.jpg"
+    },
+    {
+        "name": "Move Out Cleaning",
+        "description": "Clean your old home before moving out.",
+        "imageUrl": "/images/move_out_cleaning.jpg"
+    },
+    {
+        "name": "Car Washing",
+        "description": "Wash and clean your car inside and out.",
+        "imageUrl": "/images/car_washing.jpg"
+    },
+    {
+        "name": "Laundry Cleaning",
+        "description": "Laundry services including washing and folding clothes.",
+        "imageUrl": "/images/laundry_cleaning.jpg"
+    },
+    {
+        "name": "Delivery Service",
+        "description": "Deliver packages, groceries, and other items to your doorstep.",
+        "imageUrl": "/images/delivery_service.jpg"
+    },
+    {
+        "name": "Wait In Line",
+        "description": "Stand in line on your behalf for services or products.",
+        "imageUrl": "/images/wait_in_line.jpg"
+    },
+    {
+        "name": "Contactless Delivery",
+        "description": "Deliver items with minimal contact to ensure safety.",
+        "imageUrl": "/images/contactless_delivery.jpg"
+    },
+    {
+        "name": "Baby Food Delivery",
+        "description": "Delivery of baby food and essentials.",
+        "imageUrl": "/images/baby_food_delivery.jpg"
+    },
+    {
+        "name": "Shipping",
+        "description": "Ship items to different locations efficiently.",
+        "imageUrl": "/images/shipping.jpg"
+    },
+    {
+        "name": "Light Installation",
+        "description": "Install various types of lighting fixtures in your home.",
+        "imageUrl": "/images/light_installation.jpg"
+    },
+    {
+        "name": "Smart Home Installation",
+        "description": "Install smart home devices such as thermostats and security systems.",
+        "imageUrl": "/images/smart_home_installation.jpg"
+    },
+    {
+        "name": "Organization",
+        "description": "Help with organizing and decluttering your space.",
+        "imageUrl": "/images/organization.jpg"
+    },
+    {
+        "name": "Gardening Service",
+        "description": "Gardening services including planting, weeding, and maintenance.",
+        "imageUrl": "/images/gardening_service.jpg"
+    },
+    {
+        "name": "Weed Removal",
+        "description": "Remove weeds from gardens and lawns.",
+        "imageUrl": "/images/weed_removal.jpg"
+    },
+    {
+        "name": "Gutter Cleaning",
+        "description": "Clean gutters to prevent clogs and water damage.",
+        "imageUrl": "/images/gutter_cleaning.jpg"
+    },
+    {
+        "name": "Fence Staining",
+        "description": "Stain and maintain fences for a fresh look.",
+        "imageUrl": "/images/fence_staining.jpg"
+    }
+]
