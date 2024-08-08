@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobNest Home</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .center-content {
+            text-align: center;
+            padding: 100px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-search {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-search input[type="text"] {
+            padding: 10px 30px;
+            border: 2px solid #ccc;
+            border-radius: 10px 0 0 10px;
+            outline: none;
+            width: 499px;
+            font-size: 2em;
+        }
+
+        .nav-search .search-button {
+            background-color: #0D7A5F;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-search .search-button i {
+            color: white;
+            font-size: 2.5em;
+        }
+
+        .nav-search .search-button:hover {
+            background-color: #0a5a46;
+        }
+
+        .service-icons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 90px;
+            position: relative;
+        }
+
+        .service-icons a {
+            text-decoration: none;
+        }
+
+        .service-icons::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ccc;
+        }
+
+        .service-item {
+            text-align: center;
+            margin: 0 10px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .service-item i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .service-item span {
+            display: block;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .service-item::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+
+        .service-item:hover::after {
+            background-color: #0D7A5F;
+        }
+
+        .selected::after {
+            background-color: #0D7A5F !important;
+        }
+
+        .welcome-message {
+            margin: 20px;
+            padding: 20px;
+            background-color: #e0f7fa;
+            border-left: 5px solid #00796b;
+            display: none;
+        }
+
+        .username {
+            color: #00796b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    {{> navbar name=name}}
+
+    <div class="center-content">
+        <h1>Book trusted help for home tasks</h1>
+        <div class="search-container">
+            <form action="/displayservices" method="GET">
+                <div class="nav-search">
+                    <input type="text" placeholder="What are you looking for?" name="search" class="search-input">
+                    <button type="submit" id="search-btn" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="service-icons">
+            <div class="service-item">
+                <i class="fas fa-tools"></i>
+                <span><a href="services">Assembly</a></span>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-hammer"></i>
+                <span><a href="services">Mounting</a></span>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-truck-moving"></i>
+                <span><a href="services">Moving</a></span>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-broom"></i>
+                <span><a href="services">Cleaning</a></span>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-tree"></i>
+                <span><a href="services">Outdoor Help</a></span>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-wrench"></i>
+                <span><a href="services">Home Repairs</a></span>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-paint-brush"></i>
+                <span><a href="services">Painting</a></span>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-fire"></i>
+                <span><a href="services">Trending</a></span>
+            </div>
+        </div>
+    </div>
+
+    {{> footer}}
+
+    <div class="welcome-message" id="welcomeMessage">
+        Welcome back, <span class="username">{{name}}</span>!
+    </div>
+
+    {{!-- <script>
+        window.onload = function() {
+            const name = "{{name}}";
+            if (name) {
+                document.getElementById("welcomeMessage").style.display = "block";
+                alert('Login successful! Welcome back, ' + name + '!');
+            }
+        }
+    </script> --}}
+</body>
+</html>

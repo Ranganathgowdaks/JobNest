@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Employees</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between boxes */
+            justify-content: center; /* Center boxes horizontally */
+        }
+
+        .employee-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: calc(25% - 20px); /* Four boxes per row, accounting for gap */
+            box-sizing: border-box;
+            background-color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for better appearance */
+            margin-bottom: 20px;
+            height: 250px; /* Set a fixed height to make boxes square */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .employee-box img {
+            width: 100px; /* Fixed width for the image */
+            height: 100px; /* Fixed height for the image */
+            border: 2px solid #ddd; /* Border around image */
+            border-radius: 50%; /* Round image */
+            padding: 5px; /* Space between image and border */
+            background-color: #f4f4f4; /* Background color for the image */
+            object-fit: cover; /* Ensure image covers the given dimensions */
+        }
+
+        .employee-box h3 {
+            margin-top: 10px;
+            font-size: 1.2rem; /* Smaller font size */
+            color: #333;
+        }
+
+        .employee-box p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 0.9rem; /* Smaller font size */
+        }
+
+        .employee-box .rating {
+            margin: 10px 0;
+            color: #f4c542; /* Star color */
+        }
+
+        .employee-box .rating i {
+            font-size: 1rem; /* Smaller star size */
+            margin-right: 2px;
+        }
+
+        .employee-box .book-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #0D7A5F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem; /* Smaller font size */
+            transition: background-color 0.3s;
+        }
+
+        .employee-box .book-btn:hover {
+            background-color: #0a5a46;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hire Employees</h1>
+    <div class="container">
+        {{#each employees}}
+        <div class="employee-box">
+            <img src="/images/{{this.image}}" alt="{{this.name}}" />
+            <h3>{{this.name}}</h3>
+            <p>Skills: {{this.skills}}</p>
+            <p>Cost: ${{this.cost}}</p>
+            <form action="/book-now" method="get">
+                <input type="hidden" name="employeeId" value="{{this._id}}" />
+                <button type="submit" class="book-btn">Book</button>
+            </form>
+        </div>
+        {{/each}}
+    </div>
+</body>
+</html>

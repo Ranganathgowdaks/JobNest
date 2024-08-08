@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="file"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]::placeholder,
+        input[type="number"]::placeholder {
+            color: #888;
+        }
+
+        button {
+            background-color: #0D7A5F;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            background-color: #0a5a46;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Edit Employee Details</h1>
+
+        <form id="editEmployeeForm" action="/editEmployee/{{employee._id}}" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" value="{{employee.name}}" placeholder="Name" required>
+            <input type="text" id="imageUrl" name="imageUrl" value="{{employee.image}}" placeholder="Image URL (optional)">
+            <input type="file" id="imageFile" name="imageFile" placeholder="Choose Image (optional)">
+            <input type="text" name="skills" value="{{employee.skills}}" placeholder="Skills (comma-separated)" required>
+            <input type="number" name="cost" value="{{employee.cost}}" placeholder="Cost in Rupees" required>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('editEmployeeForm').addEventListener('submit', function(e) {
+            var imageUrl = document.getElementById('imageUrl').value.trim();
+            var imageFile = document.getElementById('imageFile').files.length;
+
+            // Ensure that only one of the fields is filled
+            if ((imageUrl && imageFile) || (!imageUrl && !imageFile)) {
+                alert('Please provide either an image URL or upload an image file, but not both.');
+                e.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>
